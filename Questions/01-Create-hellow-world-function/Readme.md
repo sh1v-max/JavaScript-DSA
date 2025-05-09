@@ -1,30 +1,50 @@
-Write a function createHelloWorld. It should return a new function that always returns "Hello World".
- 
+## 2621. Create Hello World
 
-Example 1:
+### Description:
+
+Write a function `createHelloWorld`. It should return a new function that always returns the string `"Hello World"`, regardless of the arguments passed to it.
+
+---
+
+### Example 1:
 
 ```js
 Input: args = []
 Output: "Hello World"
+
 Explanation:
 const f = createHelloWorld();
 f(); // "Hello World"
 ```
 
-The function returned by createHelloWorld should always 
-Example 2:
+---
+
+### Example 2:
 
 ```js
-Input: args = [{},null,42]
+Input: args = [{}, null, 42]
 Output: "Hello World"
+
 Explanation:
 const f = createHelloWorld();
 f({}, null, 42); // "Hello World"
 ```
 
-Any arguments could be passed to the function but it should still always return "Hello World".
- 
+---
 
-Constraints:
+### Constraints:
 
-0 <= args.length <= 10
+* 0 <= `args.length` <= 10
+
+---
+
+### Function Signature:
+
+```javascript
+/**
+ * @return {Function} A function that always returns "Hello World"
+ */
+var createHelloWorld = function() {
+
+};
+```
