@@ -1,5 +1,7 @@
 # 2626. Array Reduce Transformation
 
+`Difficulty - Easy 🟢`
+
 ### **Description**
 
 Write a function `reduce` that mimics the behavior of JavaScript's `Array.prototype.reduce`.

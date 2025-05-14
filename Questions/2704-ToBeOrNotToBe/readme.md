@@ -1,5 +1,7 @@
 ## To Be or Not to Be
 
+`Difficulty - Easy 🟢`
+
 ### **Description**
 
 Write a function `expect` that helps developers test their code.

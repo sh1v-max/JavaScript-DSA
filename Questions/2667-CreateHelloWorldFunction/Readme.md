@@ -1,5 +1,7 @@
 ## 2621. Create Hello World
 
+`Difficulty - Easy 🟢`
+
 ### Description:
 
 Write a function `createHelloWorld`. It should return a new function that always returns the string `"Hello World"`, regardless of the arguments passed to it.

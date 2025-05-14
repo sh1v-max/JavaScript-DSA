@@ -1,5 +1,7 @@
 # 2634. Filter Elements from Array
 
+`Difficulty - Easy 🟢`
+
 ### **Description**
 
 Write a function `filter` that mimics the behavior of JavaScript's `Array.prototype.filter`.

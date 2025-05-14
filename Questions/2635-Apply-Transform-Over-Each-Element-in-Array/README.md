@@ -1,5 +1,7 @@
 ## 2635. Apply Transform Over Each Element in Array
 
+`Difficulty - Easy 🟢`
+
 ### **Description**
 
 Write a function `map` that mimics the behavior of JavaScript's `Array.prototype.map`.

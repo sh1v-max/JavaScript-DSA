@@ -1,5 +1,7 @@
 ## 2620. Counter
 
+`Difficulty - Easy 🟢`
+
 ### Description:
 
 Given an integer `n`, return a **counter function**.

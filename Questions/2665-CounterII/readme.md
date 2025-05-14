@@ -1,5 +1,7 @@
 ## Counter II
 
+`Difficulty - Easy 🟢`
+
 ### **Description**
 
 Write a function `createCounter` that takes an initial integer `init`.

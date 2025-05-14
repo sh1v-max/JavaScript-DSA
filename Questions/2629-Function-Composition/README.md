@@ -1,5 +1,7 @@
 # 2629. Function Composition
 
+`Difficulty - Easy 🟢`
+
 #### **Description:**
 
 Create a function `compose` that takes an array of single-argument functions and returns a new function `fn(x)` which represents their composition.
