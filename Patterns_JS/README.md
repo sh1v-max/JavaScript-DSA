@@ -399,13 +399,25 @@ This repository contains various pattern printing problems solved using JavaScri
 **Pattern:**
 
 ```
-
+A
+AB
+ABC
+ABCD
+ABCDE
 ```
 
 **Solution:**
 
 ```javascript
-
+    pattern14(n) {
+        for (let i = 1; i <= n; i++) {
+            let char = "";
+            for (let j = 0; j < i; j++) {
+                char += String.fromCharCode(65 + j);
+            }
+            console.log(char);
+        }
+    }
 ```
 
 ## Pattern 15
@@ -413,13 +425,25 @@ This repository contains various pattern printing problems solved using JavaScri
 **Pattern:**
 
 ```
-
+ABCDE
+ABCD
+ABC
+AB
+A
 ```
 
 **Solution:**
 
 ```javascript
-
+    pattern15(n) {
+        for (let i = n; i >= 1; i--) {
+            let char = "";
+            for (let j = 0; j < i; j++) {
+                char += String.fromCharCode(65 + j);
+            }
+            console.log(char);
+        }
+    }
 ```
 
 ## Pattern 16
@@ -427,13 +451,26 @@ This repository contains various pattern printing problems solved using JavaScri
 **Pattern:**
 
 ```
-
+A
+BB
+CCC
+DDDD
+EEEEE
 ```
 
 **Solution:**
 
 ```javascript
-
+    pattern16(n) {
+        for (let i = 0; i < n; i++) {
+            let line = ''
+            const char = String.fromCharCode(65 + i)
+            for (let j = 0; j <= i; j++) {
+                line += char
+            }
+            console.log(line)
+        }
+    }
 ```
 
 ## Pattern 17
