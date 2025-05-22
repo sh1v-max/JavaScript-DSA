@@ -540,13 +540,54 @@ A B C D E
 **Pattern:**
 
 ```
-
+**********
+****  ****
+***    ***
+**      **
+*        *
+*        *
+**      **
+***    ***
+****  ****
+**********
 ```
 
 **Solution:**
 
 ```javascript
+    pattern19(n) {
+        let space = 0;
+        for (let i = 0; i < n; i++) {
+            let line = ''
+            for (let j = 0; j < n - i; j++) {
+                line += '*'
+            }
+            for (let j = 0; j < space; j++) {
+                line += ' '
+            }
+            for (let j = 0; j < n - i; j++) {
+                line += '*'
+            }
+            console.log(line);
+            space += 2;
+        }
 
+        space = 2 * n - 2;
+        for (let i = 1; i <= n; i++) {
+            let line = ''
+            for (let j = 0; j < i; j++) {
+                line += '*'
+            }
+            for (let j = 0; j < space; j++) {
+                line += ' '
+            }
+            for (let j = 0; j < i; j++) {
+                line += '*'
+            }
+            console.log(line);
+            space -= 2;
+        }
+    }
 ```
 
 ## Pattern 20
