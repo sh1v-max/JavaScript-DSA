@@ -478,13 +478,35 @@ EEEEE
 **Pattern:**
 
 ```
-
+    A
+   ABA
+  ABCBA
+ ABCDCBA
+ABCDEDCBA
 ```
 
 **Solution:**
 
 ```javascript
+    pattern17(n) {
+        for (let i = 1; i <= n; i++) {
+            let char = "";
 
+            for (let s = 0; s < n - i; s++) {
+                char += " ";
+            }
+
+            for (let j = 0; j < i; j++) {
+                char += String.fromCharCode(65 + j);
+            }
+
+            for (let j = i - 2; j >= 0; j--) {
+                char += String.fromCharCode(65 + j);
+            }
+
+            console.log(char);
+        }
+    }
 ```
 
 ## Pattern 18
@@ -492,13 +514,25 @@ EEEEE
 **Pattern:**
 
 ```
-
+E 
+D E 
+C D E 
+B C D E 
+A B C D E
 ```
 
 **Solution:**
 
 ```javascript
-
+    pattern18(n) {
+        for (let i = 0; i < n; i++) {
+            let char = "";
+            for (let j = n - 1 - i; j < n; j++) {
+                char += String.fromCharCode(65 + j) + " ";
+            }
+            console.log(char.trim());
+        }
+    }
 ```
 
 ## Pattern 19
