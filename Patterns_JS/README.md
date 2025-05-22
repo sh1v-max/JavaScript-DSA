@@ -650,6 +650,37 @@ A B C D E
 **Pattern:**
 
 ```
+*****
+*   *
+*   *
+*   *
+*****
+```
+
+**Solution:**
+
+```javascript
+    pattern21(n) {
+        for (let i = 1; i <= n; i++) {
+            let line = "";
+
+            for (let j = 1; j <= n; j++) {
+                if (i === 1 || i === n || j === 1 || j === n) {
+                    line += "*";
+                } else {
+                    line += " ";
+                }
+            }
+            console.log(line);
+        }
+    }
+```
+
+## Pattern 22
+
+**Pattern:**
+
+```
 
 ```
 
