@@ -595,6 +595,8 @@ A B C D E
 **Pattern:**
 
 ```
+n = 5
+
 *        *
 **      **
 ***    ***
@@ -650,6 +652,8 @@ A B C D E
 **Pattern:**
 
 ```
+n = 5
+
 *****
 *   *
 *   *
@@ -681,11 +685,40 @@ A B C D E
 **Pattern:**
 
 ```
+n = 5
 
+5 5 5 5 5 5 5 5 5 
+5 4 4 4 4 4 4 4 5 
+5 4 3 3 3 3 3 4 5 
+5 4 3 2 2 2 3 4 5 
+5 4 3 2 1 2 3 4 5 
+5 4 3 2 2 2 3 4 5 
+5 4 3 3 3 3 3 4 5 
+5 4 4 4 4 4 4 4 5 
+5 5 5 5 5 5 5 5 5
 ```
 
 **Solution:**
 
 ```javascript
+    pattern22(n) {
+        const size = 2 * n - 1;
 
+        for (let i = 0; i < size; i++) {
+            let line = '';
+
+            for (let j = 0; j < size; j++) {
+                let top = i;
+                let left = j;
+                let right = size - 1 - j;
+                let bottom = size - 1 - i;
+
+                let minDist = Math.min(top, left, right, bottom);
+
+                let num = n - minDist;
+                line += num + ' ';
+            }
+            console.log(line.trim());
+        }
+    }
 ```
