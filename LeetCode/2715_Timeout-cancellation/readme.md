@@ -1,4 +1,4 @@
-## To Be or Not to Be
+## 2715. Timeout Cancellation
 
 `Difficulty - Easy 🟢`
 

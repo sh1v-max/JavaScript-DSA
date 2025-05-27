@@ -1,4 +1,4 @@
-## 2621. Create Hello World
+## 2667. Create Hello World Function
 
 `Difficulty - Easy 🟢`
 

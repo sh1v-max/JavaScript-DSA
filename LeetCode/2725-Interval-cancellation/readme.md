@@ -1,5 +1,4 @@
-## To Be or Not to Be
-
+## 2725. Interval Cancellation
 `Difficulty - Easy 🟢`
 
 ## Description
