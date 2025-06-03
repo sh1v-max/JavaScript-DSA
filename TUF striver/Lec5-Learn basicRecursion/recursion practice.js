@@ -90,11 +90,35 @@ function fact3(n, acc = 1) {
   return fact3(n - 1, n * acc);
 }
 
-const factorial = fact(4)
-console.log(factorial)
+// const factorial = fact(4)
+// console.log(factorial)
 
 // =====================================================================================
 // ? reverse an array
 function revArr (arr) {
-  
+  let rev = []
+  for (let i = arr.length - 1; i >= 0; i--){
+    rev.push(arr[i])
+  }
+  console.log(rev)
+  return rev
 }
+
+// revArr([1,2,3,4,5])
+
+function revArr2 (arr, n){
+  let res = new Array(n)
+
+  for(let i = n -1; i >= 0; i--){
+      res[n-i-1] = arr[i]
+  }
+
+  for (let i = 0; i < n; i++){
+      arr[i] = res[i]
+  }
+  return  
+}
+
+const n = 5;
+const arr = [5, 4, 3, 2, 1];
+console.log(revArr2(arr, n))
