@@ -1,4 +1,4 @@
-## 1431. Kids With the Greatest Number of Candies
+## 1832. Check if the Sentence Is Pangram
 
 `Difficulty - Easy 🟢`
 
