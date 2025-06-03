@@ -6,7 +6,7 @@ function recursion(n) {
     i++
   }
 }
-recursion(3)
+// recursion(3)
 
 // ? just a random test
 function num(n) {
@@ -66,3 +66,35 @@ function printHello(n, count = 1){
 }
 
 // printHello(10)
+
+// =====================================================================================
+// ? factorial of a number
+function fact(n) {
+  if(n === 0) {
+    return 1
+  }
+  let factorial = n * fact(n - 1)
+  // console.log(factorial)
+  return factorial
+}
+
+function fact2(n) {
+  if(n === 0) {
+    return 1
+  }
+  return n * fact2(n - 1)
+}
+
+function fact3(n, acc = 1) {
+  if (n === 0) return acc;
+  return fact3(n - 1, n * acc);
+}
+
+const factorial = fact(4)
+console.log(factorial)
+
+// =====================================================================================
+// ? reverse an array
+function revArr (arr) {
+  
+}
