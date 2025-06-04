@@ -95,17 +95,22 @@ function fact3(n, acc = 1) {
 
 // =====================================================================================
 // ? reverse an array
+
+function revArr0(arr){
+  return arr.reverse()  
+}
+
 function revArr (arr) {
   let rev = []
   for (let i = arr.length - 1; i >= 0; i--){
     rev.push(arr[i])
   }
-  console.log(rev)
   return rev
 }
 
-// revArr([1,2,3,4,5])
+// console.log(revArr([1,2,3,4,5]))
 
+// no return, reversing the original array
 function revArr2 (arr, n){
   let res = new Array(n)
 
@@ -116,9 +121,9 @@ function revArr2 (arr, n){
   for (let i = 0; i < n; i++){
       arr[i] = res[i]
   }
-  return  
 }
 
 const n = 5;
-const arr = [5, 4, 3, 2, 1];
+const arr = [1,2,3,4,5];
 console.log(revArr2(arr, n))
+console.log(arr)
