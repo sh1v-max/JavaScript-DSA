@@ -136,6 +136,23 @@ function revArr3(arr) {
   return res
 }
 
+// two pointer approach
+function revArr4(arr) {
+  let left = 0;
+  let right = arr.length - 1;
+
+  while (left < right) {
+    // Swap arr[left] and arr[right]
+    let temp = arr[left];
+    arr[left] = arr[right];
+    arr[right] = temp;
+
+    left++;
+    right--;
+  }
+  return arr
+}
+
 const arr = [1, 2, 3, 4, 5]
-console.log(revArr3(arr))
+console.log(revArr4(arr))
 // console.log(arr)
