@@ -153,6 +153,17 @@ function revArr4(arr) {
   return arr
 }
 
+// recursion
+function revArr5(arr, left = 0, right = arr.length - 1) {
+  if (left < right) {
+    let temp = arr[left]
+    arr[left] = arr[right]
+    arr[right] = temp
+    revArr5(arr, left + 1, right - 1)
+  }
+  return arr
+}
+
 const arr = [1, 2, 3, 4, 5]
-console.log(revArr4(arr))
+console.log(revArr5(arr))
 // console.log(arr)
