@@ -1,6 +1,6 @@
 function recursion(n) {
   let i = 1
-  while (i < n){
+  while (i < n) {
     console.log(i)
     recursion(n - 1)
     i++
@@ -10,7 +10,7 @@ function recursion(n) {
 
 // ? just a random test
 function num(n) {
-  for(let i = 1; i <= n; i++){
+  for (let i = 1; i <= n; i++) {
     console.log(i)
     num(n - 1)
   }
@@ -22,10 +22,10 @@ function num(n) {
 //? print 1 - n
 let count = 1
 function num2(n) {
-  if(n === 0) {
+  if (n === 0) {
     return
   }
-  num2(n-1)
+  num2(n - 1)
   console.log(count)
   count++
 }
@@ -34,8 +34,8 @@ function num2(n) {
 // num2(10)
 
 // ? another approach
-function printHello(n, count = 1){
-  if(count > n) {
+function printHello(n, count = 1) {
+  if (count > n) {
     return
   }
   console.log(count)
@@ -46,19 +46,19 @@ function printHello(n, count = 1){
 
 // ======================================================================
 // ? print something n times
-function num3(n ) {
-  if(n === 0) {
+function num3(n) {
+  if (n === 0) {
     return
   }
   console.log('hello')
-  num3(n-1 )
+  num3(n - 1)
 }
 
 // num3(10 )
 
 // ? another approach
-function printHello(n, count = 1){
-  if(count > n) {
+function printHello(n, count = 1) {
+  if (count > n) {
     return
   }
   console.log('hello')
@@ -70,7 +70,7 @@ function printHello(n, count = 1){
 // =====================================================================================
 // ? factorial of a number
 function fact(n) {
-  if(n === 0) {
+  if (n === 0) {
     return 1
   }
   let factorial = n * fact(n - 1)
@@ -79,15 +79,15 @@ function fact(n) {
 }
 
 function fact2(n) {
-  if(n === 0) {
+  if (n === 0) {
     return 1
   }
   return n * fact2(n - 1)
 }
 
 function fact3(n, acc = 1) {
-  if (n === 0) return acc;
-  return fact3(n - 1, n * acc);
+  if (n === 0) return acc
+  return fact3(n - 1, n * acc)
 }
 
 // const factorial = fact(4)
@@ -96,13 +96,13 @@ function fact3(n, acc = 1) {
 // =====================================================================================
 // ? reverse an array
 
-function revArr0(arr){
-  return arr.reverse()  
+function revArr0(arr) {
+  return arr.reverse()
 }
 
-function revArr (arr) {
+function revArr(arr) {
   let rev = []
-  for (let i = arr.length - 1; i >= 0; i--){
+  for (let i = arr.length - 1; i >= 0; i--) {
     rev.push(arr[i])
   }
   return rev
@@ -111,19 +111,31 @@ function revArr (arr) {
 // console.log(revArr([1,2,3,4,5]))
 
 // no return, reversing the original array
-function revArr2 (arr){
+function revArr2(arr) {
   const n = arr.length
   let res = new Array(n)
 
-  for(let i = n -1; i >= 0; i--){
-      res[n-i-1] = arr[i]
+  for (let i = n - 1; i >= 0; i--) {
+    res[n - i - 1] = arr[i]
   }
 
-  for (let i = 0; i < n; i++){
-      arr[i] = res[i]
+  for (let i = 0; i < n; i++) {
+    arr[i] = res[i]
   }
 }
 
-const arr = [1,2,3,4,5];
-console.log(revArr2(arr))
-console.log(arr)
+// another approach
+function revArr3(arr) {
+  let n = arr.length;
+  let res = new Array(n);
+  let j = 0
+  for (let i = n - 1; i >= 0; i--) {
+    res[j] = arr[i]
+    j++
+  }
+  return res
+}
+
+const arr = [1, 2, 3, 4, 5]
+console.log(revArr3(arr))
+// console.log(arr)
