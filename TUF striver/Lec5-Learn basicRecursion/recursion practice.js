@@ -111,7 +111,8 @@ function revArr (arr) {
 // console.log(revArr([1,2,3,4,5]))
 
 // no return, reversing the original array
-function revArr2 (arr, n){
+function revArr2 (arr){
+  const n = arr.length
   let res = new Array(n)
 
   for(let i = n -1; i >= 0; i--){
@@ -123,7 +124,6 @@ function revArr2 (arr, n){
   }
 }
 
-const n = 5;
 const arr = [1,2,3,4,5];
-console.log(revArr2(arr, n))
+console.log(revArr2(arr))
 console.log(arr)
