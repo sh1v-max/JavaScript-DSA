@@ -16,14 +16,17 @@ console.log(f)
 let g=a**b
 console.log(g)
 
+let x = 20
+console.log(x)
+x = 30
+console.log(x)
+
 let h="Namaste"
 console.log(h)
 
 let i = "DSA"
 console.log(i)
 console.log(h+i)
-
-let x = 20
-console.log(x)
-x = 30
-console.log(x)
+// this will concatenate the string h with the number x and print the result.
+// Since x is a number, it will be converted to a string and concatenated with h.
+// The result will be "Namaste30"
