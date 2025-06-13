@@ -8,7 +8,7 @@ function secondLargest (arr) {
       secondLargest = largest
       largest = arr[i]
     }
-    else if( a[i] > secondLargest){
+    else if(arr[i] > secondLargest){
       secondLargest = arr[i]
     }
   }
