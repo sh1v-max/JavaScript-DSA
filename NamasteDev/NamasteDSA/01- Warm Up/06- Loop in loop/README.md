@@ -44,55 +44,6 @@ for (let i = 1; i <= 5; i++) {
   console.log("--------------");
 }
 ```
-
----
-
-## Example 2: Print a Square of Stars (5x5)
-
-```js
-for (let i = 1; i <= 5; i++) {
-  let row = "";
-  for (let j = 1; j <= 5; j++) {
-    row += "* ";
-  }
-  console.log(row);
-}
-```
-
-### Output:
-
-```
-* * * * *  
-* * * * *  
-* * * * *  
-* * * * *  
-* * * * *  
-```
-
----
-
-## Example 3: Print a Triangle of Stars
-
-```js
-for (let i = 1; i <= 5; i++) {
-  let row = "";
-  for (let j = 1; j <= i; j++) {
-    row += "* ";
-  }
-  console.log(row);
-}
-```
-
-### Output:
-
-```
-*  
-* *  
-* * *  
-* * * *  
-* * * * *  
-```
-
 ---
 
 ### 🧠 Key Concepts:
@@ -100,7 +51,3 @@ for (let i = 1; i <= 5; i++) {
 * Total iterations = outer loop count × inner loop count
 * Be careful with performance (nested loops can be slow for large values)
 * Useful for patterns, tables, matrix operations, etc.
-
----
-
-Want to go into **pattern building, triangle shapes**, or **array of arrays (2D arrays)** next using nested loops?
