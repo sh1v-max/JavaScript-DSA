@@ -24,7 +24,7 @@ function countDigits(n) {
   if(n === 0) {
     return 1
   }
-  n = Math.abs(n);
+  n = Math.abs(n); // this is to handle negative numbers
   let count = 0;
   while(n > 0) {
     n = Math.floor(n / 10);
