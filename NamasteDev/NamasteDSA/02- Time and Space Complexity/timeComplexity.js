@@ -1,10 +1,5 @@
-// index.js
-
 //  WHAT IS TIME COMPLEXITY?
 // Time Complexity tells us how the runtime of a function increases as the input size increases.
-
-//  WHAT IS SPACE COMPLEXITY?
-// Space Complexity tells us how much memory is used as the input size increases.
 
 // === CONSTANT TIME: O(1) ===
 function printFirstElement(arr) {
@@ -51,38 +46,6 @@ function factorial(n) {
 }
 console.log(factorial(5)); // O(n) for recursion depth
 
-// === SPACE COMPLEXITY EXAMPLES ===
-
-// O(1) Space - no extra memory used
-function sumOfArray(arr) {
-  let sum = 0; // Only one variable
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
-  }
-  return sum;
-}
-
-// O(n) Space - new array used
-function doubleArray(arr) {
-  let result = []; // New array
-  for (let i = 0; i < arr.length; i++) {
-    result.push(arr[i] * 2);
-  }
-  return result;
-}
-
-// O(n) Space - recursion uses call stack
-function recursiveSum(n) {
-  if (n === 0) return 0;
-  return n + recursiveSum(n - 1); // Each call stays in memory
-}
-
-//  RULES TO ANALYZE
-// - Loops → Linear (O(n))
-// - Nested loops → Quadratic (O(n^2))
-// - Divide and conquer → Logarithmic (O(log n))
-// - Recursion → watch out for both time and space
-
 // === PRACTICE EXAMPLES ===
 
 // Q1: Find if a number exists in an array (Linear search) ➝ O(n)
@@ -112,4 +75,4 @@ function sumFormula(n) {
 // O(n^2) → Nested loops
 // O(2^n) / O(n!) → Exponential / factorial (avoid if possible)
 
-console.log("✅ Time and Space Complexity Explained!");
+console.log("✅ Time Complexity Explained!");
