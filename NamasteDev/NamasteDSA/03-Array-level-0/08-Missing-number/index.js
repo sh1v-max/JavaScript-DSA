@@ -44,3 +44,35 @@ console.log(missingNumber(nums));
 
 // Space Complexity: O(1)
 // Sorting is done in-place, and only a few variables are used.
+
+
+// approach 2, using XOR
+// The sum of numbers from 0 to n is given by the formula:
+
+// total_sum = (n × (n + 1)) / 2
+// Steps:
+
+// Calculate total_sum using the formula above.
+// Calculate the sum of all elements in the input array.
+// The missing number is total_sum - sum_of_array.
+
+var missingNumber2 = function(nums) {
+  let n = nums.length;
+  let total_sum = (n * (n + 1)) / 2;
+  let sum_of_array = 0;
+
+  for (let num of nums) {
+      sum_of_array += num;
+  }
+
+  return total_sum - sum_of_array;
+};
+
+const nums2 = [9,6,4,2,3,5,7,0,1];
+console.log(missingNumber2(nums2));
+
+// Time Complexity: O(n)
+// We traverse the array once to compute the sum.
+
+// Space Complexity: O(1)
+// Only a few variables are used, no extra space proportional to input size.
