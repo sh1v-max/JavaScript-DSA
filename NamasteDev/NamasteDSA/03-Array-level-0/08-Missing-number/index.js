@@ -1,4 +1,5 @@
-// Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
+// Given an array nums containing n distinct numbers in the range [0, n], 
+// return the only number in the range that is missing from the array.
 // Example 1:
 // Input: nums = [3,0,1]
 // Output: 2
@@ -41,17 +42,14 @@ console.log(missingNumber(nums));
 
 // Time Complexity: O(n log n)
 // Due to sorting the array.
-
 // Space Complexity: O(1)
 // Sorting is done in-place, and only a few variables are used.
 
 
 // approach 2, using XOR
 // The sum of numbers from 0 to n is given by the formula:
-
 // total_sum = (n × (n + 1)) / 2
 // Steps:
-
 // Calculate total_sum using the formula above.
 // Calculate the sum of all elements in the input array.
 // The missing number is total_sum - sum_of_array.
@@ -73,6 +71,5 @@ console.log(missingNumber2(nums2));
 
 // Time Complexity: O(n)
 // We traverse the array once to compute the sum.
-
 // Space Complexity: O(1)
 // Only a few variables are used, no extra space proportional to input size.
