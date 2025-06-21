@@ -45,3 +45,45 @@ var singleNumber = function(nums) {
 // We traverse the array once.
 // Space Complexity: O(1)
 // Only a few variables are used, no extra space proportional to input size.
+
+
+// naive solution
+function singleNumber(nums) {
+  const count = {};
+
+  // Count frequency of each number
+  for (let num of nums) {
+    count[num] = (count[num] || 0) + 1;
+  }
+
+  // Find the number that appears only once
+  for (let num in count) {
+    if (count[num] === 1) {
+      return Number(num); // keys are strings in objects
+    }
+  }
+}
+
+
+// or
+function singleNumber(nums) {
+  const count = {};
+
+  // First loop: Count each number
+  for (let i = 0; i < nums.length; i++) {
+    let num = nums[i];
+    if (count[num] === undefined) {
+      count[num] = 1;
+    } else {
+      count[num]++;
+    }
+  }
+
+  // Second loop: Find the number with count === 1
+  for (let i = 0; i < nums.length; i++) {
+    let num = nums[i];
+    if (count[num] === 1) {
+      return num;
+    }
+  }
+}
