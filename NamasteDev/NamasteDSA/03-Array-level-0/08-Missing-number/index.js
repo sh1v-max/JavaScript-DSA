@@ -38,7 +38,7 @@ var missingNumber = function(nums) {
 }
 
 const nums = [9,6,4,2,3,5,7,0,1];
-console.log(missingNumber(nums));
+// console.log(missingNumber(nums));
 
 // Time Complexity: O(n log n)
 // Due to sorting the array.
@@ -67,9 +67,29 @@ var missingNumber2 = function(nums) {
 };
 
 const nums2 = [9,6,4,2,3,5,7,0,1];
-console.log(missingNumber2(nums2));
+// console.log(missingNumber2(nums2));
 
 // Time Complexity: O(n)
 // We traverse the array once to compute the sum.
 // Space Complexity: O(1)
 // Only a few variables are used, no extra space proportional to input size.
+
+
+// approach 3, using XOR
+var missingNumber3 = function(nums) {
+  let n = nums.length;
+  let xor = 0;
+
+  for (let i = 0; i <= n; i++) {
+      xor ^= i;
+  }
+
+  for (let num of nums) {
+      xor ^= num;
+  }
+
+  return xor;
+};
+
+const nums3 = [9,6,4,2,3,5,7,0,1];
+console.log(missingNumber3(nums3));
