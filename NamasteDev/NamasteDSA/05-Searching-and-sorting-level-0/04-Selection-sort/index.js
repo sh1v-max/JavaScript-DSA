@@ -25,3 +25,6 @@ function selectionSort(arr) {
 // Example usage
 const arr = [29, 10, 14, 37, 13];
 console.log(selectionSort(arr)); // Output: [10, 13, 14, 29, 37]
+
+// Time complexity: O(n^2)
+// Space complexity: O(1)
