@@ -1,0 +1,1 @@
+// write a function to sort an array using merge sort
