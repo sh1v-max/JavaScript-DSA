@@ -28,3 +28,6 @@ function merge(left, right) {
 // Example
 const nums1 = [38, 27, 43, 3, 9, 82, 10];
 console.log("Recursive:", mergeSort(nums1));
+
+// time complexity: O(n log n)
+// space complexity: O(n)
