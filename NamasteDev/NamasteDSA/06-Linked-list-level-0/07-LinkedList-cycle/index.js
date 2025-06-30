@@ -16,3 +16,6 @@ var hasCycle = function(head){
   // if we have visited all the nodes and haven't found a cycle, then there is no cycle
   return false;
 }
+
+// time complexity: O(n)
+// space complexity: O(n)

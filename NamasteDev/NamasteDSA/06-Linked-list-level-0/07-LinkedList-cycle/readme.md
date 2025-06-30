@@ -2,7 +2,7 @@
 
 ### (Also called the **Slow and Fast Pointer** approach)
 
-This is the most efficient and commonly used method.
+This is the most efficient and commonly used method. Floyd said: "Imagine two guys, one slow and one fast, are racing. If there is a loop, the fast guy will eventually catch up to the slow guy."
 
 ### Time: O(n)
 
