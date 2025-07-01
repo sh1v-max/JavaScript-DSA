@@ -75,13 +75,3 @@ while (curr) {
 | Reverse   | O(n) | O(1)  |
 
 > Efficient — no extra memory used, and runs in linear time.
-
-### Bonus Tip (Recursive Approach)
-
-If you want a recursive version too — let me know. But for interviews and production code, **iterative** is preferred due to better space usage.
-
-Let me know if you'd like to:
-
-* Reverse a **part of the list** (e.g., from position `m` to `n`)
-* Reverse in **groups of k nodes**
-* Or visualize this with diagrams or animations in your markdown.
