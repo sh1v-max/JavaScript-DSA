@@ -58,6 +58,9 @@ function removeNthFromEnd1 (head, n) {
   return sentinel.next
 }
 
+// time complexity: O(n)
+// space complexity: O(1)
+
 // more optimized solution
 function removeNthFromEnd2 (head, n) {
   let sentinel = new ListNode()
@@ -79,3 +82,6 @@ function removeNthFromEnd2 (head, n) {
   second.next = second.next.next
   return sentinel.next
 }
+
+// time complexity: O(n)
+// space complexity: O(1)
