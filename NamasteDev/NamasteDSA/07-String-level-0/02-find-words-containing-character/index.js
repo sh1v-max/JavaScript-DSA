@@ -18,3 +18,6 @@ function findWords(words, char) {
   }
   return res
 }
+
+// time complexity: O(n^2)
+// space complexity: O(n)
