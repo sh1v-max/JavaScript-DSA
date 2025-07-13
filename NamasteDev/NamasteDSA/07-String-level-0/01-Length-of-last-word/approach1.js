@@ -6,23 +6,23 @@
 // count character and return the count, that will be length of last word
 
 function lengthOfLastWord(s) {
-  let n = s.length;
-  while ( n>= 0){
-    if(s[n] == " "){
-      n--;
-    }else{
-      break
-    }
+  let n = s.length - 1
+  while (n >= 0){
+      if(s[n] == " "){
+          n--
+      } else {
+          break
+      }
   }
 
   let count = 0
-  while (n>= 0){
-    if(s[n] != " "){
-      count++;
-      n--;
-    }else{
-      break
-    }
+  while (n >= 0) {
+      if(s[n] != " "){
+          count++
+          n--
+      }else{
+          break
+      }
   }
   return count
 }
