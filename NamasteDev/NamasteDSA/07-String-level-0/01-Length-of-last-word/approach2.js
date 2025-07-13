@@ -1,6 +1,6 @@
 // Given a string s consisting of words and spaces, return the length of the last word in the string
 
-// approach: two loop
+// approach: one loop
 // start from the end, skip spaces
 // count character and return the count
 // that will be length of last word

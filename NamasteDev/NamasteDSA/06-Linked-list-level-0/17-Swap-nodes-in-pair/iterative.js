@@ -5,7 +5,7 @@
 // use two pointers, one for the current node and one for the next node
 // swap the values of the current node and the next node
 // use the dummy node to maintain the structure of the linked list
-// iterate through the list with curr, next and dummy pointer
+//iterate through the list with curr, next and dummy pointer
 // stop wen curr.next or next.next is null
 
 function swapPairs(head) {
