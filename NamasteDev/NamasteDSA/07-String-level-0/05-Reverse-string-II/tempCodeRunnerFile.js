@@ -1,1 +1,0 @@
-revStr(s)
