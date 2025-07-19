@@ -1,5 +1,8 @@
 // Using floyd's cycle finding algorithm
-// Also called slow and fast pointer approach
+// Also called tortoise and hare algo
+// using two pointers, slow and fast
+// if there's a cycle, they'll eventually meet
+// if fast or fast.next become null, there's no cycle
 
 function hasCycle(head) {
   if(!head) return false;

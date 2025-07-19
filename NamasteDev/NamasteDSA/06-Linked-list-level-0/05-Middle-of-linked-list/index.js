@@ -34,7 +34,9 @@ function findMiddleByArray(head) {
 
 
 // using fast and slow pointer
-// this is more efficient
+// initialize both at the head of the list
+// slow moves one step while fast moves two steps
+// when fast reached the end, slow will be middle
 
 function findMiddleNode(head) {
   let slow = head;
@@ -45,7 +47,7 @@ function findMiddleNode(head) {
     fast = fast.next.next;
   }
 
-  return slow.val;
+  return slow;
 }
 
 console.log(findMiddleNode(head)); // Output: 3

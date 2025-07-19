@@ -30,7 +30,9 @@ function isPalindrome(head) {
 // space complexity = O(n)
 
 // approach two
-// using fast and slow pointer, reverse the second half, check for palindrome
+// find the middle using slow and fast approach
+// reverse the second half using temp variable
+// compare corresponding element in first and second half
 
 function isPalindrome(head) {
   if (!head || !head.next) return true //checking the corner case
@@ -64,7 +66,6 @@ function isPalindrome(head) {
 
   return true
 }
-
 
 // time complexity = O(n)
 // space complexity = O(1)
