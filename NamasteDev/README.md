@@ -1,4 +1,4 @@
-# Namaste DSA
+# [Namaste DSA](https://github.com/sh1v-max/Namaste-Dev/tree/main/NamasteDSA)
 
 This repository contains structured notes and JavaScript implementations based on the **Namaste DSA** course by Akshay Saini.
 
@@ -7,8 +7,9 @@ The objective is to build a solid foundation in Data Structures and Algorithms t
 
 ## About the Course
 
-* **Instructor:** Akshay Saini
+* **Instructor:** [Akshay Saini](https://www.linkedin.com/in/akshaymarch7/?originalSubdomain=in)
 * [Watch here](https://namastedev.com/learn/namaste-dsa)
+* [Questions here](https://github.com/sh1v-max/Namaste-Dev/tree/main/NamasteDSA)
 
 The course is known for its beginner-friendly explanations and strong emphasis on problem-solving, recursion fundamentals, memory models, and core DSA concepts.
 
