@@ -1,8 +1,10 @@
 //  function to remove element from linked list
 
-// intuition: create a sentinel node and traverse the linked list, 
-// if the current node's value is equal to the given value, 
-// remove it by skipping it, else move to the next node
+// approach:
+// create a sentinel/dummy node before head
+// iterate through the list
+// skip any node whose value matches val
+// return the next of sentinel as the new head
 
 function removeElement(head, val) {
   const sentinel = new ListNode(null);
