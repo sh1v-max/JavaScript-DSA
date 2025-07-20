@@ -27,17 +27,17 @@ function getIntersectionNode(headA, headB) {
 // Then traverse headB and check if any node exists in the set
 
 function getIntersectionNode(headA, headB) {
-  const visited = new Set();
+  const Store = new Set();
 
   let currA = headA;
   while (currA) {
-    visited.add(currA);
+    Store.add(currA);
     currA = currA.next;
   }
 
   let currB = headB;
   while (currB) {
-    if (visited.has(currB)) return currB;
+    if (Store.has(currB)) return currB;
     currB = currB.next;
   }
 
