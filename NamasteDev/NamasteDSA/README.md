@@ -64,6 +64,15 @@ The goal is to build a solid foundation in **arrays, strings, recursion, linked 
 8. [1903. Largest Odd Number in String 🟢](https://leetcode.com/problems/largest-odd-number-in-string/)
 9. [14. Longest Common Prefix 🟢](https://leetcode.com/problems/longest-common-prefix/)
 10. [242. Valid Anagram 🟢](https://leetcode.com/problems/valid-anagram/)
+11. [205. Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/)
+15. [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/)
+
+
+## **07 - Stack and queues level 0**
+1. [255. Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/)
+2. [232. Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
+16. [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+17. [155. Min Stack](https://leetcode.com/problems/min-stack/)
 
 ### More will be added soon... 
 
