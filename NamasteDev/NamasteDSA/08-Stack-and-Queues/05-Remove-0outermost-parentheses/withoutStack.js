@@ -1,8 +1,3 @@
-/**
- * @param {string} s
- * @return {string}
- */
-
 // approach: Splitting Primitive Parts using String
 // we track primitive substrings by counting parentheses balance.
 // whenever the balance goes back to 0, we know a primitive substring ended.
@@ -11,27 +6,26 @@
 // finally, we combine all modified primitive substrings into the result.
 
 function removeOuterParentheses(s) {
-  let res = "";
-  let start = 0;
-  let balance = 0;
+  let res = ''
+  let start = 0
+  let balance = 0
 
   for (let i = 0; i < s.length; i++) {
-      if (s[i] === "(") {
-          balance++;
-      } else {
-          balance--;
-      }
+    if (s[i] === '(') {
+      balance++
+    } else {
+      balance--
+    }
 
-      // If balance = 0, we found a complete primitive substring
-      if (balance === 0) {
-          res += s.slice(start + 1, i);
-          start = i + 1; // move start to next primitive
-      }
+    // If balance = 0, we found a complete primitive substring
+    if (balance === 0) {
+      res += s.slice(start + 1, i)
+      start = i + 1 // move start to next primitive
+    }
   }
 
-  return res;
-};
-
+  return res
+}
 
 // time complexity: O(n) - we traverse the string once
 // space complexity: O(1)

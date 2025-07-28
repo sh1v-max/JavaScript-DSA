@@ -37,20 +37,20 @@
 
 function removeOuterParentheses(s) {
   let stack = []
-  let res = ""
+  let res = ''
 
   // we will store all parentheses but the outermost one
-  for(let i = 0; i < s.length; i++){
-    if(s[i] === "("){
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === '(') {
       // if it's not empty, it's not outermost
-      if(stack.length > 0) {
+      if (stack.length > 0) {
         res = res + s[i]
       }
       stack.push(s[i])
       // else will run when s[i] === ")"
     } else {
       stack.pop()
-      if(stack.length > 0) {
+      if (stack.length > 0) {
         res = res + s[i]
       }
     }
