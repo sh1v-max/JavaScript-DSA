@@ -1,5 +1,11 @@
 // write a function to sort an array using insertion sort
 
+// Approach: Insertion Sort
+// Start with the second element.
+// Store the current element and compare it with all previous elements.
+// If a previous element is greater than the current element, move it one position forward.
+// Keep doing this until the correct position for the current element is found.
+// Repeat until the whole array is sorted.
 
 function insertionSort(arr) {
   let n = arr.length;

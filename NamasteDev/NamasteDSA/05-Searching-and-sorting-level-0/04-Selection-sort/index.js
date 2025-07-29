@@ -1,5 +1,11 @@
 // write a function to sort an array using selection sort
 
+// Approach: Selection Sort
+// Selection Sort is a simple comparison-based algorithm.
+// It works by repeatedly finding the minimum element in the array
+// and swapping it with the first unsorted element.
+// The algorithm repeats this process until the entire array is sorted.
+
 function selectionSort(arr) {
   let n = arr.length;
 

@@ -1,5 +1,10 @@
 //  write a function to sort an array using bubble sort
 
+// Approach: Bubble Sort
+// Iterate through the array multiple times
+// In each pass, compare adjacent elements and swap them if needed
+// After each pass, the largest unsorted element bubbles up to its correct position at the end
+
 let arr = [5, 4, 3, 2, 1]
   
 function bubbleSort(arr){

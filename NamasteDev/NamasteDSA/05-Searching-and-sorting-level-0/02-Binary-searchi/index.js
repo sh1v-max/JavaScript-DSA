@@ -1,5 +1,15 @@
 // write a function to search for an element in a sorted array using binary search
 
+// approach:
+// Set a start and end pointer.
+// Keep moving the pointers until they cross.
+// At each step, calculate the middle index.
+// If the middle element is the target, return the index.
+// If the target is less than the middle element, move the end pointer to the left.
+// If the target is more than the middle element, move the start pointer to the right.
+// If the target is not found, return -1.
+
+
 function binarySearch(arr, target) {
   let start = 0,
     end = arr.length - 1

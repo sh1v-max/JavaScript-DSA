@@ -1,5 +1,11 @@
 // write a function to sort array using merge sort algorithm
 
+// approach: divide and conquer
+// Divide the array into two halves.
+// Sort each half using merge sort.
+// Merge the two sorted halves into one sorted array.
+// divide, conquer, and merge
+
 function mergeSort(arr) {
   if (arr.length <= 1) return arr;
 
