@@ -36,7 +36,7 @@
 // push the result onto the stack
 // return the top of the stack as the result
 
-function evalRpn(arr) {
+function evalRpn(tokens) {
   let stack = []
 
   for (let i = 0; i < tokens.length; i++) {
@@ -64,7 +64,7 @@ function evalRpn(arr) {
 }
 
 // diff approach
-function evalRpn(arr) {
+function evalRpn(tokens) {
   let stack = []
 
   for (let i = 0; i < tokens.length; i++) {
