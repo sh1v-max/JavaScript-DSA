@@ -28,9 +28,13 @@ The course is known for its beginner-friendly explanations and strong emphasis o
 * ✅ Introduction to DSA
 * ✅ Recursion & Call Stack
 * ✅ Time and Space Complexity
+* ✅ Sorting – bubble, insertion, selection, merge
+* ✅ Searching – linear, binary
 * ✅ Arrays – traversal, search, edge cases
 * ✅ Strings – manipulation, frequency maps, comparison logic
 * ✅ Linked Lists – implementation and operations
+* ✅ Stacks & Queues
+
 
 > The list will be updated as the course progresses.
 
