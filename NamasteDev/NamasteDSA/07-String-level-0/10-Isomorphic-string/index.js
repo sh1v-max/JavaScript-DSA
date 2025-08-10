@@ -8,8 +8,8 @@
 // else return true\
 
 function isIsomorphic(s, t) {
-  let map1 = {};
-  let map2 = {};
+  let map1 = {}; // s - t mapping
+  let map2 = {}; // t - s mapping
 
   for (let i = 0; i < s.length; i++) {
     // if there's no mapping yet

@@ -22,7 +22,7 @@ function longestCommonPrefix(strs) {
         return strs[0].substring(0, x)
       }
     }
-    ++x
+    x++
   }
   // whole str is prefix
   return strs[0]
