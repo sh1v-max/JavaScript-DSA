@@ -38,7 +38,7 @@ function groupAnagrams(strs) {
 // we'll create an array that counts the frequency of each letter in the word
 // Then, we'll convert that frequency array into a unique string key
 // We'll use this string key to group the anagrams
-// Finally, we'll return all the grouped values
+
 
 function groupAnagrams(strs) {
   let map = {}
