@@ -23,13 +23,13 @@
 // loop through array and fix the first element
 // also we will check for the duplicates
 // if i>0 && nums[i]==nums[i-1], skip
-// now, for each fixed element, use two pointer to find other two num
+// now, for each elements use the two pointer, 2 sum (k-1 sum) to find the other two num
 // l = i+1, r = n-1
-// we will run until l<r
 // check for sum using nums[i]+nums[l]+nums[r]
 // if sum<0 then l++, if sum>0 then r--
-// if sum==0, push to result, and do l++, r-- to avoid duplicates
-// we need to take care of duplicates at l, r, and i
+// if sum==0, push to result, and do l++, r-- for all outcomes
+// also we need to take care of duplicates at l, r, and i
+// return res
 
 function threeSum(arr) {
   arr.sort((a, b) => a - b)
