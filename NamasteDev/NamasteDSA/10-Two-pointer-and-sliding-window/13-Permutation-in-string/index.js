@@ -13,6 +13,8 @@
 // Input: s1 = "ab", s2 = "eidboaoo"
 // Output: false
 
+//? 567. Permutation in String
+
 // approach: sliding window with frequency count
 // intuition:
 // we want to know if s2 contains any permutation of s1
