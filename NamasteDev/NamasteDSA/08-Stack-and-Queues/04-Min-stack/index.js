@@ -2,7 +2,13 @@
 // and retrieving the minimum element in constant time
 // time complexity must be O(1) for each operation
 
-
+// Approach:
+// Use a stack of pairs [val, minForThatVal]
+// On push: store [val, min(val, currentMin)]
+// we will store data as array (val and min)
+// On pop: remove the top
+// top(): return top[0]
+// getMin(): return top[1]
 
 var MinStack = function () {
   this.s = []
