@@ -1,0 +1,136 @@
+%-------------------------
+% Resume in Latex (Fixed & ATS Friendly)
+% Author : Shiv Shankar Singh (based on Jake Gutierrez template)
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+% Page setup
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure ATS readability
+\pdfgentounicode=1
+
+% Commands
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Shiv Shankar Singh} \\ \vspace{4pt}
+    \small +91-7068900427 $|$ \href{mailto:singhshiv0427@gmail.com}{singhshiv0427@gmail.com} $|$
+    \href{https://www.linkedin.com/in/shiv-shankar-singh-/}{linkedin.com/in/shiv-shankar-singh} $|$
+    \href{https://github.com/sh1v-max}{github.com/sh1v-max}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Professional Summary}
+Aspiring Frontend Developer skilled in \textbf{React.js, JavaScript (ES6+), HTML5, CSS3, Redux, and REST APIs}. Experienced in building responsive, user-focused applications with strong knowledge of modern UI frameworks, state management, and testing libraries. Passionate about performance optimisation and clean, maintainable code.
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Lovely Professional University}{Punjab, India}
+    {B.Tech. in Computer Science and Engineering}{Oct 2020 -- Jul 2024}
+  \resumeSubheading
+    {Tulsi Vidya Niketan}{Varanasi, India}
+    {Higher Secondary (CBSE Board) -- 83\%}{Mar 2018 -- Jul 2020}
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+  \resumeSubheading{NetflixGPT}{React.js, Redux Toolkit, Firebase, REST APIs, Tailwind CSS}
+  {Streaming Web App}{}
+    \begin{itemize}[leftmargin=0.3in]
+      \resumeItem{Built a movie streaming platform with \textbf{AI-driven search}, custom hooks, and reusable components.}
+      \resumeItem{Integrated \textbf{Firebase authentication} and TMDB API for categories and trailers.}
+      \resumeItem{Optimized performance using memoization, reducing API latency by 25\% and improving load time by 30\%.}
+      \resumeItem{Deployed on Firebase Hosting with \textbf{95\% mobile compatibility}.}
+    \end{itemize}
+
+  \resumeSubheading{BiteSwift}{React.js, Redux, REST APIs, Tailwind CSS, Auth0}
+  {Food Delivery Platform}{}
+    \begin{itemize}[leftmargin=0.3in]
+      \resumeItem{Developed responsive restaurant app with dynamic homepage, cart management, and search.}
+      \resumeItem{Implemented lazy loading, sessionStorage, and custom hooks to minimize reloads and improve UX.}
+      \resumeItem{Achieved 100\% mobile compatibility and reduced navigation time by 25\%.}
+    \end{itemize}
+
+  \resumeSubheading{Portfolio}{React.js, Tailwind CSS, Context API, Netlify}
+  {Personal Developer Website}{}
+    \begin{itemize}[leftmargin=0.3in]
+      \resumeItem{Designed and deployed personal portfolio showcasing skills and projects.}
+      \resumeItem{Integrated EmailJS for real-time form submissions without backend.}
+    \end{itemize}
+
+  \resumeSubheading{YourCountry}{React.js, REST APIs, Hooks}
+  {Country Info Webpage}{}
+    \begin{itemize}[leftmargin=0.3in]
+      \resumeItem{Built a country information app displaying country details and neighbors via REST APIs.}
+      \resumeItem{Optimized data fetching with hooks, improving performance by 30\% and ensuring 100\% responsiveness.}
+    \end{itemize}
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \item \textbf{Languages:} JavaScript (ES6+), HTML5, CSS3 \\
+    \item \textbf{Frameworks/Libraries:} React.js, Redux, Context API, Tailwind CSS, Firebase, RESTful APIs \\
+    \item \textbf{Tools:} Git, GitHub, npm, Babel, Parcel, Netlify, Firebase Hosting \\
+    \item \textbf{Others:} Testing (React Testing Library, Vitest), OOP, DBMS, Linux
+\end{itemize}
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \item The Complete 2023 Web Development Bootcamp (Udemy) -- Jul 2023 
+    \item Server-side JavaScript with Node.js (Coursera) -- May 2023
+    \item Data Structures and Algorithms - Self Paced (GeeksforGeeks) -- Jul 2022
+    \item Introduction to Programming Using Java (Coding Ninjas) -- May 2022
+\end{itemize}
+
+\end{document}
