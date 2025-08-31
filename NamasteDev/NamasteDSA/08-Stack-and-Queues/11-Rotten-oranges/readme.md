@@ -1,6 +1,6 @@
 ## 🧭 What is BFS?
 
-
+**BFS (Breadth-First Search)** is a graph traversal algorithm. It explores all the neighbors (adjacent nodes) of a node **before** going deeper to their neighbors — like spreading outwards in **layers or waves**.
 
 In simple terms:
 
