@@ -48,16 +48,16 @@ function maxDepth(root) {
 function maxDepth(root) {
   let maxD = 0
 
-  function dfs(node, depth) {
+  function traversal(node, depth) {
     if (!node) return
     if (!node.left && !node.right) {
       maxD = Math.max(maxD, depth)
     }
-    dfs(node.left, depth + 1)
-    dfs(node.right, depth + 1)
+    traversal(node.left, depth + 1)
+    traversal(node.right, depth + 1)
   }
 
-  dfs(root, 1)
+  traversal(root, 1)
   return maxD
 }
 
