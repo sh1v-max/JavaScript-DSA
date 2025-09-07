@@ -74,7 +74,7 @@ The goal is to build a solid foundation in **arrays, strings, recursion, linked 
 16. [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
 17. [155. Min Stack](https://leetcode.com/problems/min-stack/)
 
-### More will be added soon... 
+### More will be added soon
 
 ---
 
