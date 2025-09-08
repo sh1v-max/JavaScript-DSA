@@ -71,8 +71,26 @@ The goal is to build a solid foundation in **arrays, strings, recursion, linked 
 ## **07 - Stack and queues level 0**
 1. [255. Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/)
 2. [232. Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
-16. [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
-17. [155. Min Stack](https://leetcode.com/problems/min-stack/)
+3. [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+4. [155. Min Stack](https://leetcode.com/problems/min-stack/)
+5. [1021. Remove Outermost Parentheses](https://leetcode.com/problems/remove-outermost-parentheses/)
+6. [150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
+7. [496. Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/)
+8. [739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
+9. [503. Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/)
+10. [994. Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)
+
+## **08 - Binary search algorithm**
+1. [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/)
+2. [374. Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/)
+3. [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+4. [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
+5. [278. First Bad Version](https://leetcode.com/problems/first-bad-version/)
+6. [162. Find Peak Element](https://leetcode.com/problems/find-peak-element/)
+7. [34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+8. [852. Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/)
+9. [540. Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/)
+10. [658. Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)
 
 ### More will be added soon
 
