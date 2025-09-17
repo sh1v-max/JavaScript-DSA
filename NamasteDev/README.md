@@ -234,7 +234,7 @@ Contributions are welcome! Whether it's:
 - **Technical Depth** - Strong foundation in computer science fundamentals
 
 
-## 🔗 Related Resources & References
+## 🎓 Related Resources & References
 
 ### Official NamasteDev Ecosystem
 - **[Namaste DSA Repository](https://github.com/sh1v-max/Namaste-Dev)** - Personal DSA learning journey

@@ -178,18 +178,6 @@ testCases.forEach((test, index) => {
 - [ ] **Advanced Topics** - Trees, Graphs, Dynamic Programming
 - [ ] **Interview Readiness** - Solve 150+ problems across all difficulty levels
 
-## 🎓 Learning Resources
-
-### Recommended Platforms
-- **[LeetCode](https://leetcode.com/)** - Primary practice platform
-- **[NeetCode](https://neetcode.io/)** - Curated problem sets
-- **[Visualgo](https://visualgo.net/)** - Algorithm visualizations
-- **[JavaScript.info](https://javascript.info/)** - Modern JavaScript reference
-
-### Helpful Repositories
-- **[trekhleb/javascript-algorithms](https://github.com/trekhleb/javascript-algorithms)** - Comprehensive JS algorithms
-- **[TheAlgorithms/JavaScript](https://github.com/TheAlgorithms/JavaScript)** - Community implementations
-
 ## 🔮 Roadmap
 
 ### Short Term (1-3 months)
@@ -227,7 +215,17 @@ Found a better solution? Have suggestions for improvement? Contributions welcome
 - Add comprehensive test cases
 - Ensure solutions are optimal and readable
 
-## 🔗 Related Resources & Learning Community
+## 🎓 Related Resources & Learning Community
+
+### Recommended Platforms
+- **[LeetCode](https://leetcode.com/)** - Primary practice platform
+- **[NeetCode](https://neetcode.io/)** - Curated problem sets
+- **[Visualgo](https://visualgo.net/)** - Algorithm visualizations
+- **[JavaScript.info](https://javascript.info/)** - Modern JavaScript reference
+
+### Helpful Repositories
+- **[trekhleb/javascript-algorithms](https://github.com/trekhleb/javascript-algorithms)** - Comprehensive JS algorithms
+- **[TheAlgorithms/JavaScript](https://github.com/TheAlgorithms/JavaScript)** - Community implementations
 
 ### Popular JavaScript DSA Repositories
 - **[JavaScript DSA Practice](https://github.com/sh1v-max/JavaScript-DSA)** - Personal daily practice repository
