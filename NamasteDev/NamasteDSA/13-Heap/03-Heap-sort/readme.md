@@ -1,4 +1,4 @@
-# Heap Sort – Extremely Detailed Guide
+# Heap Sort
 
 ## 1. Introduction
 
@@ -35,7 +35,7 @@ Heap Sort relies on **heaps**, so let's review:
 | Parent      | `Math.floor((i-1)/2)` |
 
 
-## 3. High-Level Heap Sort Algorithm
+## 3. Heap Sort Algorithm
 
 Heap Sort works in **two main phases**:
 
