@@ -31,13 +31,13 @@ fib(5)
 
 //* solution 2 (RECURSION)
 
-const fibN = (n) => {
+const fibNum = (n) => {
   if (n <=1) return n 
 
-  return fibN(n-1) + fibN(n-2)
+  return fibNum(n-1) + fibNum(n-2)
 }
 
-console.log(fibN(3));
+console.log(fibNum(3));
 
 //* one-Liner
 
