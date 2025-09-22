@@ -1,3 +1,7 @@
+// 912. Sort an Array
+// https://leetcode.com/problems/sort-an-array/
+
+
 let arr = [1, 4, 10, 5, 3, 6, 7, 9, 2]
 
 function heapSort(arr) {
@@ -48,3 +52,7 @@ function heapifyDown(arr, i, n) {
 
 const sortedArray = heapSort(arr)
 console.log(sortedArray)
+
+// Heap Sort Algorithm
+// Time Complexity: O(n log n)
+// Space Complexity: O(1)
