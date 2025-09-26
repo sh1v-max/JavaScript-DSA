@@ -53,6 +53,9 @@ function heapifyDown(arr, i, n) {
 const sortedArray = heapSort(arr)
 console.log(sortedArray)
 
-// Heap Sort Algorithm
 // Time Complexity: O(n log n)
-// Space Complexity: O(1)
+// for heapify: O(log n)
+// for create max heap: O(n), why? because we are calling heapify for n/2 nodes only
+// for sorting: O(n log n) (n times we are calling heapify which is O(log n))
+// overall: O(n) + O(n log n) = O(n log n)
+// Space Complexity: O(1) (no extra space in order of n)
