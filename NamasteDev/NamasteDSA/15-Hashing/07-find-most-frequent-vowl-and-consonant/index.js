@@ -6,7 +6,6 @@
 
 // when it's about counting, always think about using hashmap
 
-// approach
 // using hashmap, initialize char and freq and store in map
 // intuition:
 // we need the maximum frequency of vowels and consonants in a string
