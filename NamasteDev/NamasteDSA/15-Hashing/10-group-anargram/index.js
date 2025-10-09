@@ -34,7 +34,7 @@ function groupAnagrams(strs) {
       res[sortedWord].push(strs[i])
     }
   }
-
+  // console.log(res)
   return [...Object.values(res)]
 }
 
@@ -51,40 +51,45 @@ function groupAnagrams(strs) {
 // We'll use this string key to group the anagrams
 // Finally, we'll return all the grouped values
 
-// function groupAnagrams(strs) {
-//   let map = {}
+// creating a whole big string like a2b0c0d0e0f0g1h0i0j0k0l0m1n1o0p0q0r1s0t0u0v0w0x0y0z0
+// and not as a2n1g1r1m1 because then we again need to sort it
+// which will take m log n
 
-//   // loop through the input array and for each word
-//   for (let i = 0; i < strs.length; i++) {
-//     let freqArr = Array(26).fill(0)
-//     let s = strs[i]
+function groupAnagrams(strs) {
+  let map = {}
 
-//     // count the frequency of each letter in the word
-//     for (let j = 0; j < s.length; j++) {
-//       let index = s[j].charCodeAt(0) - 'a'.charCodeAt(0)
-//       freqArr[index]++
-//     }
+  // loop through the input array and for each word
+  for (let i = 0; i < strs.length; i++) {
+    let freqArr = Array(26).fill(0)
+    let s = strs[i]
 
-//     // convert the frequency array into a unique string key
-//     let key = ''
-//     for (let k = 0; k < 26; k++) {
-//       // key = key + String.fromCharCode(k) + freqArr[k]
-//       // can also do this to store key with alphabets
-//       // but those are just to identify
-//       key += '#' + freqArr[k]
-//     }
+    // count the frequency of each letter in the word
+    for (let j = 0; j < s.length; j++) {
+      // getting the index where we need to add
+      let index = s[j].charCodeAt(0) - 'a'.charCodeAt(0)
+      freqArr[index]++
+    }
 
-//     // group the anagrams
-//     if (!map[key]) {
-//       map[key] = [s]
-//     } else {
-//       map[key].push(s)
-//     }
-//   }
+    // convert the frequency array into a unique string key
+    let key = ''
+    for (let k = 0; k < 26; k++) {
+      // key = key + String.fromCharCode(k) + freqArr[k]
+      // can also do this to store key with alphabets
+      // but those are just to identify
+      key += '#' + freqArr[k]
+    }
 
-//   // return all the grouped values
-//   return Object.values(map)
-// }
+    // group the anagrams
+    if (!map[key]) {
+      map[key] = [s]
+    } else {
+      map[key].push(s)
+    }
+  }
+
+  // return all the grouped values
+  return Object.values(map)
+}
 
 // time complexity: O(n * m)
 // where n is the number of words in the input list and m is the length of the longest word
