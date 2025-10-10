@@ -139,14 +139,18 @@ function nextGreaterElement(nums1, nums2) {
   }
 
   // result for nums1 using the map
-  const res = []
+  // const res = []
 
-  for (let i = 0; i < nums1.length; i++) {
-    const num = nums1[i]
-    res.push(map[num])
-  }
+  // for (let i = 0; i < nums1.length; i++) {
+  //   const num = nums1[i]
+  //   res.push(map[num])
+  // }
 
-  return res
+  // return res
+
+  // or we can directly do map
+
+  return nums1.map(num => map[num])
 }
 
 // Time Complexity: O(n)
