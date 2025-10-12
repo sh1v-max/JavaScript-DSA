@@ -15,7 +15,7 @@
 
 //? 567. Permutation in String
 
-// approach: sliding window with frequency count
+// sliding window with frequency count
 // intuition:
 // we want to know if s2 contains any permutation of s1
 // a permutation of s1 means: same characters with same frequency, just in any order
