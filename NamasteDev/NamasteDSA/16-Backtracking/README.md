@@ -1,4 +1,4 @@
-# 🧠 **Backtracking in DSA (JavaScript) — From the Very Basics**
+# 🧠 **Backtracking in DSA (JavaScript)**
 
 
 ## **1. The Core Idea**
@@ -7,7 +7,6 @@ Backtracking is a **systematic way to explore all possible solutions** to a prob
 
 Think of it as a **“smart brute-force”** approach — it tries every possibility but avoids exploring obviously wrong paths.
 
----
 
 ## **2. Real-World Analogy**
 
@@ -18,7 +17,6 @@ Imagine you’re solving a maze:
 
 That “going back” is **backtracking**.
 
----
 
 ## **3. The Building Blocks of Backtracking**
 
@@ -30,7 +28,6 @@ To solve problems using backtracking, three things are always needed:
 | **Constraints**               | Rules that tell you which options are valid.  |
 | **Goal / Solution Condition** | When to stop recursion and record the result. |
 
----
 
 ## **4. State Space Tree — The Heart of Backtracking**
 
@@ -47,7 +44,6 @@ Let’s take a simple example to visualize this.
 
 > Given an array `[2, 3, 5]`, find all subsets whose sum equals `8`.
 
----
 
 ## **5. Problem Setup: “Subset Sum Problem”**
 
@@ -64,7 +60,6 @@ Output: [[3,5]]
 
 We’ll now see **how backtracking builds and explores** possible subsets step-by-step.
 
----
 
 ## **6. Understanding Through State Space Tree**
 
@@ -98,7 +93,6 @@ Now, calculate sums:
 
 The algorithm **explores** all paths (recursively), and when it finds one that matches the target, it **stores it**.
 
----
 
 ## **7. Writing the Recursive Code**
 
@@ -122,7 +116,6 @@ We’ll define:
 * Include the current element
 * Exclude the current element
 
----
 
 ### ✅ **Full JavaScript Code**
 
@@ -159,7 +152,6 @@ function subsetSum(arr, target) {
 console.log(subsetSum([2,3,5], 8)); // [[3,5]]
 ```
 
----
 
 ## **8. Step-by-Step Execution**
 
@@ -179,7 +171,6 @@ console.log(subsetSum([2,3,5], 8)); // [[3,5]]
 
 When a path fails (sum > target), the recursion “backtracks” — removing the last added element (`path.pop()`).
 
----
 
 ## **9. How Backtracking Actually Works**
 
@@ -190,7 +181,6 @@ When a path fails (sum > target), the recursion “backtracks” — removing th
 | **Constraint Checking**   | Early stopping using conditions like `sum > target`.              |
 | **Result Collection**     | Whenever constraints are met, clone and store the path.           |
 
----
 
 ## **10. Visualizing Stack Calls**
 
@@ -210,7 +200,6 @@ If you print the recursion calls, you’ll see how it behaves like DFS:
 
 That’s the entire **state space tree traversal** in action.
 
----
 
 ## **11. Time & Space Complexity**
 
@@ -224,9 +213,8 @@ Let’s analyze:
   * Recursion depth: `O(n)`
   * Results storage: depends on number of valid subsets.
 
-> [Then why it's still efficient?]()
+> [Then why it's still efficient?](https://github.com/sh1v-max/Namaste-Dev/blob/main/NamasteDSA/16-Backtracking/whyStillEfficient.md)
 
----
 
 ## **12. Key Insights**
 
@@ -237,7 +225,6 @@ Let’s analyze:
 | **Backtrack Step**      | Undo choice → `path.pop()`                                         |
 | **Recursive Structure** | Problem = smaller subproblems (DFS traversal).                     |
 
----
 
 ## **13. When to Use Backtracking**
 
@@ -247,7 +234,6 @@ You should think of backtracking when:
 * There’s a **constraint** (like sum == target, or placing queens safely).
 * You can **incrementally build** the solution and **discard invalid paths early**.
 
----
 
 ## **14. Real Examples (All Based on Same Idea)**
 
@@ -261,7 +247,6 @@ You should think of backtracking when:
 
 They’re all **variations of the same core pattern** — recursive exploration with backtracking.
 
----
 
 ## **15. General Template (Universal Backtracking Structure)**
 
@@ -282,7 +267,6 @@ function backtrack(params...) {
 }
 ```
 
----
 
 ## **16. Summary**
 

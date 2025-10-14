@@ -1,3 +1,6 @@
+// 20. Valid Parentheses
+// https://leetcode.com/problems/valid-parentheses/
+
 // Given a string s containing just the characters '(', ')', '{', '}', ‘[' and ']',
 // determine if the input string is valid.
 // Open brackets must be closed by the same type of brackets.
