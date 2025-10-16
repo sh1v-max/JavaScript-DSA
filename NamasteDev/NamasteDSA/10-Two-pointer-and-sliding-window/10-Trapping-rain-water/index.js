@@ -20,6 +20,7 @@
 // and the minimum of both maxHeight will impact the water level
 // also the height of it's own
 
+// approach
 // for each index, find the tallest bar on the left and right
 // then trapped water at that index = min(maxLeft, maxRight) - height[i]
 // it will show time exceeds on leetcode when submitting
