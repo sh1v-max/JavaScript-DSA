@@ -44,7 +44,8 @@ var permute = function (nums) {
         path.push(num)
         backtrack(path)
         path.pop()
-        // alway push first, then call recursion backtrack and then pop while backtracking
+        // alway push first,
+        // then call recursion backtrack and then pop while backtracking
       }
     }
   }
