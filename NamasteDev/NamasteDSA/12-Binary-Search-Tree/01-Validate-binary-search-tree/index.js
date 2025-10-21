@@ -2,8 +2,6 @@
 // https://leetcode.com/problems/validate-binary-search-tree/
 // Difficulty: Medium
 
-const { isValidElement } = require('react')
-
 // given the root of a binary tree, determine if it is a valid binary search tree (BST).
 
 // A valid BST is defined as follows:
@@ -91,7 +89,10 @@ var isValidBST = function (root, left = null, right = null) {
 }
 
 // time: O(n)
+// you visit each node exactly once, do a constant amount of work per node so total time is O(n)
 // space: O(n)
+// the height of the tree could be n in the case of a skewed tree, and this is the size of the implicit call stack
+// in the average case, the height of the tree is log(n), therefore space complexity would be O(log(n))
 
 // top-down: it pushes constraints down the tree, low and high
 // bottom-up: it pulls back min/max values up, and checks at parent
