@@ -57,3 +57,19 @@ var subsetsWithDup = function (nums) {
 
 //  time complexity: O(n*2^n) as each element can be either included or excluded, has two choices
 // space complexity: O(n * 2^n) for the recursion stack and path storage
+
+// valid parentheses
+// var isValid = function (s) {
+//   const stack = []
+//   const map = { ')': '(', '}': '{', ']': '[' }
+
+//   for (let char of s) { // O(n)
+//     if (map[char]) {
+//       const prev = stack.pop()
+//       if (prev !== map[char]) return false
+//     } else {
+//       stack.push(char)
+//     }
+//   }
+//   return stack.length === 0
+// }
