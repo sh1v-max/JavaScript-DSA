@@ -36,6 +36,7 @@ function subset(nums) {
   let backtrack = (path, start) => {
     // initially path is empty, so we push empty array first
     res.push([...path])
+    // adding copy on the current elem, not the reference because it's changing every time
     for (let i = start; i < nums.length; i++) {
       path.push(nums[i])
       backtrack(path, i + 1)
