@@ -87,9 +87,7 @@ function combinationSum2(candidates, target) {
 console.log("Dry run:")
 let candidates = [10,1,2,7,6,1,5]
 let target = 8
-console.log(`given candidates = ${candidates}, target = ${target}`)
 console.log(combinationSum2(candidates, target)) // [[1,1,6],[1,2,5],[1,7],[2,6]]
-console.log("done successfully")
 
 // time complexity: O(2^n) - in the worst case, we may explore all subsets
 // each element can be either chosen or skipped (but pruning and duplicate skipping reduce actual calls)
