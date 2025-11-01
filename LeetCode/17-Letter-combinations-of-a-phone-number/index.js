@@ -26,17 +26,17 @@
 //   - undo the choice (backtrack) to try another letter
 
 // approach
-// 1. handle edge case: if digits is empty, return []
-// 2. create a mapping of digits → letters
-// 3. define a recursive helper function backtrack(path, index):
-//      - if index === digits.length, join the path into a string and add it to results
-//      - otherwise, get all possible letters for the current digit
-//        for each letter:
-//           - push it into path (choose step)
-//           - call backtrack(path, index + 1) to explore further
-//           - pop it after returning (backtrack step)
-// 4. start recursion with backtrack([], 0).
-// 5. return the result list
+// handle edge case: if digits is empty, return []
+// create a mapping of digits → letters
+// define a recursive helper function backtrack(path, index):
+//   - if index === digits.length, join the path into a string and add it to results
+//   - otherwise, get all possible letters for the current digit
+//     for each letter:
+//        - push it into path (choose step)
+//        - call backtrack(path, index + 1) to explore further
+//        - pop it after returning (backtrack step)
+// start recursion with backtrack([], 0).
+// return the result list
 
 var letterCombinations = function (digits) {
   if (!digits.length) return []
