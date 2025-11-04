@@ -78,6 +78,6 @@ let isPalindrome = (s) => {
   return true
 }
 
-// time: O(n.2n) where n is the length of the string
-// O(n) for checking palindrome and O(2n) for generating all possible partitions, which is two choices (cut or not cut) at each char
+// time: O(n.2^n) where n is the length of the string
+// O(n) for checking palindrome and O(2^n) for generating all possible partitions, which is two choices (cut or not cut) at each char
 // space: O(n) for the recursion stack and path storage
