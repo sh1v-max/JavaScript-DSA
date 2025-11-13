@@ -48,13 +48,14 @@ function fractionalKnapSack(weights, values, capacity) {
       remainingCapacity = 0
     }
   }
+  return totalValue
 }
 
 const values = [60, 100, 120]
 const weights = [10, 20, 30]
 const capacity = 50
 
-console.log(fractionalKnapSack(values, weights, capacity))
+console.log(fractionalKnapSack(weights, values, capacity))
 // output: 240
 
 // time complexity: O(n log n) due to sorting

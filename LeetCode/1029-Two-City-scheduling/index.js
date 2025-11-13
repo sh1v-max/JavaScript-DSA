@@ -21,6 +21,8 @@
 // Input: costs = [[259,770],[448,54],[926,667],[184,139],[840,118],[577,469]]
 // Output: 1859
 
+// greedy algorithm builds up a solution step-by-step by always choosing the locally optimal choice at each step rather than choosing one that seems best at the moment in hopes that it will lead to the globally optimal solution
+
 // intuition:
 // if we ignore the “exactly n people per city” rule,
 // we would simply send everyone to whichever city is cheaper for them.
@@ -70,3 +72,6 @@ var twoCitySchedCost = function (costs) {
 
   return res
 }
+
+// time complexity: O(n log n) due to sorting
+// space complexity: O(1)
