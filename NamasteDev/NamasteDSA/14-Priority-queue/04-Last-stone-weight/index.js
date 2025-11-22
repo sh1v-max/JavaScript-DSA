@@ -39,12 +39,22 @@
 // - take 1 and 1 → 0 left → heap = [1]
 // return 1
 
+// heap / priority queue — greedy
+// intuition:
+// the problem is about repeatedly taking the two heaviest stones and smashing them
+// - if they’re equal, both are destroyed
+// - if not, the smaller is destroyed, and the larger is reduced by the smaller's weight
+// at each step, you always want to pick the heaviest stones to reduce the array optimally
+// this is a classic **max-heap (priority queue) scenario**, where we always extract the largest elements first
+// continuing this process until <= 1 stone remains guarantees correct final weight
+
 // approach:
-// 1. insert all stones into a max heap
-// 2. while heap size > 1:
-//    - remove two largest stones
-//    - if unequal, insert their difference back
-// 3. return remaining stone if any, else 0
+// - create a max-heap (priority queue) of stones
+// - while heap has more than 1 stone:
+//       - extract two largest stones x and y
+//       - if x != y, insert (y - x) back into heap
+//       - if x == y, do nothing (both destroyed)
+// - return the last remaining stone (heap top) or 0 if none remain
 
 
 var lastStoneWeight = function (stones) {
@@ -66,3 +76,6 @@ var lastStoneWeight = function (stones) {
   }
   return pq.dequeue() || 0
 }
+
+// time: O(n log n), each enqueue/dequeue in heap is log n, and there are up to n-1 smash operations
+// space: O(n), for the heap

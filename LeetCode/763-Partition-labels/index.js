@@ -7,34 +7,30 @@
 
 // return a list of integers representing the size of these parts
 
-// partition labels — greedy + interval merging
-//
+//~ partition labels — greedy + interval merging
 // intuition:
 // each character in the string spans from its first occurrence to its last
 // a valid partition must fully contain that entire span
 // so every character behaves like an interval: [first[ch], last[ch]]
-//
 // if we scan the string left, right and keep extending the current partition’s end
 // to include the last occurrence of every character we meet,
 // then the moment our current index reaches that partitionEnd,
 // we know the entire partition is self-contained
 //, no character inside it appears outside of it
-//
 // then we cut the partition there and start a new one
-//
 // this greedy always works because extending to the farthest last-occuring character
 // ensures we never split a character across partitions,
 // and cutting as early as possible maximizes number of partitions
 
-// approach:
+//~ approach:
 // - build first[] and last[] occurrence arrays for all 26 characters
 // - initialize partitionStart = 0, partitionEnd = 0
 // - loop through string:
-//        update partitionEnd = max(partitionEnd, last[currChar])
-//        if i == partitionEnd:
-//             we found a complete partition
-//             push its size, (partitionEnd - partitionStart + 1)
-//             start a new one, partitionStart = i + 1
+//    update partitionEnd = max(partitionEnd, last[currChar])
+//    if i == partitionEnd:
+//       we found a complete partition
+//       push its size, (partitionEnd - partitionStart + 1)
+//       start a new one, partitionStart = i + 1
 // - return the partition sizes
 
 var partitionLabels = function (s) {
