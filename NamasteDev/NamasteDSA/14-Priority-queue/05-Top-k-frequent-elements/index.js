@@ -11,26 +11,34 @@
 // Input: nums = [1], k = 1
 // Output: [1]
 
+// top k frequent elements — heap (priority queue) approach
 // intuition:
-// we need the k elements that appear most frequently in nums
-// - first, count frequency of each element using a map
-//   - key = element, value = count
-// - instead of sorting the entire array by frequency (O(n log n)), we can maintain
-//   a min-heap of size k to keep track of the k most frequent elements
-// - min-heap property:
-//   - top of heap always contains the element with the smallest frequency among current k
-//   - when heap size exceeds k, remove the smallest frequency element
-// - after iterating all elements, heap contains the k most frequent elements
-// - convert heap to array and extract values as the result
+// we need the k elements that appear the most times
+// step 1: count frequencies, easy with a hashmap
+// step 2:
+// instead of sorting all elements by frequency (O(n log n)),  
+// we maintain a min-heap of size k
+// why?
+//   - the heap always keeps the top k most frequent elements seen so far
+//   - the smallest frequency sits on top
+//   - whenever the heap grows beyond k, we remove the smallest
+// this ensures:
+//   - after processing all elements, heap contains exactly the k most frequent
+//   - we avoid full sorting, better performance
+// this is greedy because:
+//   - we always keep the "best" k candidates seen so far
+//   - we always drop the least frequent when size exceeds k
 
 // approach:
-// 1. iterate through nums and build frequency map
-// 2. create min-heap of size k using frequency as priority
-// 3. iterate through map entries:
-//    - push {val, freq} into heap
-//    - if heap size > k, remove top element (smallest freq)
-// 4. convert heap to array and map to extract only the element values
-// 5. return the array of k most frequent elements
+// - build a frequency map: element, count
+// - create a min-heap prioritized by frequency
+// - for each (element, freq):
+//       push into heap
+//       if heap.size > k:
+//            pop()  // remove least frequent
+// - heap now contains exactly k most frequent elements
+// - extract the values from heap and return them
+
 
 var topKFrequent = function (nums, k) {
   // create a map of frequencies
@@ -65,3 +73,13 @@ var topKFrequent = function (nums, k) {
   console.log(res)
   return res
 }
+
+
+// time complexity:
+// O(n) to build frequency map
+// O(m log k) to push into heap (m = number of unique elements ≤ n)
+// overall: O(n log k)
+
+// space complexity:
+// O(n) for map + O(k) for heap
+// overall: O(n)
