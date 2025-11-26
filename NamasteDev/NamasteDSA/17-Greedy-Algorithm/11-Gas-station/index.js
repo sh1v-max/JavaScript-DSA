@@ -53,7 +53,7 @@
 // - after traversing all stations:
 //     - if totalGain >= 0, the candidate start we have is guaranteed to allow completing the circuit
 //     - this works because the deficits before the candidate are compensated by the surplus afterwards
-//
+
 // approach:
 // - initialize totalGain = 0, currGain = 0, startIndex = 0
 // - iterate i = 0, n-1:
@@ -75,17 +75,28 @@
 
 var canCompleteCircuit = function (gas, cost) {
   let totalGain = 0
+  // totalGain tracks the overall net gas across the entire circuit
+  // if it's negative, no solution
   let currGain = 0
+  // currGain tracks the net gas from the current candidate starting station
+  // if it's negative, curr start is invalid
   let res = 0
 
   for (let i = 0; i < gas.length; i++) {
     let gain = gas[i] - cost[i]
+    // net gas at station i
     totalGain += gain
+    // track overall net gain to check if it's possible
     currGain += gain
+    // for the current start, if it's possible or not
 
     if (currGain < 0) {
+      // if currGain is negative, it means
+      // - starting from res to i will fail, because no fuel
       currGain = 0
+      // reset currGain for new start
       res = i + 1
+      // updating the next start
     }
   }
   if (totalGain < 0) {
