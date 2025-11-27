@@ -25,7 +25,6 @@
 //       at position `from`, passengers enter , add numPassengers
 //       at position `to`, passengers leave  , subtract numPassengers
 //   this marks how the number of people in the car changes at each location.
-
 // - after marking all changes, walk from location 0, 1000,
 //   keeping a running sum `usedCapacity` that tells you how many people are currently in the car.
 // - if at any point:
@@ -41,7 +40,7 @@
 // - between those points, the count stays constant
 // - overlapping trips automatically accumulate through the running sum
 // - this avoids sorting or checking pairwise overlaps
-//
+
 // approach:
 // - create location array of size 1001 (because 0 <= point <= 1000)
 // - for each trip [p, from, to]:
@@ -54,13 +53,12 @@
 //            return false             // capacity exceeded at this point
 // - if loop completes
 // return true
-//
+
 // why this approach works:
 // - difference array builds exact passenger changes at every kilometer
 // - prefix sum reconstructs real-time passenger count
 // - if capacity is ever violated, we detect it immediately
 // - if not violated anywhere, the route is valid
-
 
 var carPooling = function (trips, capacity) {
   let location = new Array(1001).fill(0)
