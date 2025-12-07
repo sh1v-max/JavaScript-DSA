@@ -87,7 +87,7 @@ var coinChange0 = function (coins, amount) {
 // - final answer is fn(amount)
 
 // dp solution
-var coinChange = function (coins, amount) {
+var coinChange1 = function (coins, amount) {
   let n = coins.length
   // creating a map for memoization
   let dp = {}
@@ -120,3 +120,58 @@ var coinChange = function (coins, amount) {
 // memoization ensures each remAmount (0..amount) is computed once,
 // and each computation loops through all coins
 // space: o(amount) for the dp object + recursion stack
+
+// iterative dp solution
+// intuition:
+// - instead of asking “how do I break amount into smaller subproblems?”
+//   (top-down), we flip the perspective:
+//       “if I know the minimum coins for all amounts < current amount,
+//        can I build the answer for this amount?”
+// - dp[i] will store the minimum coins needed to form amount i
+// - base case: dp[0] = 0 → amount 0 needs 0 coins
+// - for every amount rem from 1..amount:
+//       we try every coin and check:
+//            can we form (rem - coin)?
+//            if yes, then using this coin costs (1 + dp[rem - coin])
+//       our job is to pick the minimum among all valid choices
+// - this builds the solution bottom-up: dp[1], dp[2], dp[3] ... dp[amount]
+// - if dp[amount] stays Infinity → no combination of coins can make that amount
+// - this avoids recursion overhead and computes each state exactly once
+
+// approach (bottom-up dp):
+// - create an array dp of size amount+1, fill with Infinity
+// - dp[0] = 0 (0 coins to form amount 0)
+// - for rem = 1..amount:
+//       for each coin in coins:
+//            remAmt = rem - coin
+//            if remAmt >= 0:
+//                 dp[rem] = min(dp[rem], 1 + dp[remAmt])
+// - after filling dp:
+//       if dp[amount] is Infinity → return -1
+//       else return dp[amount]
+
+var coinChange = function (coins, amount) {
+  let n = coins.length
+  // dp[i] will be storing the minimum number of coins required for amount i, and length is amount+1 (starting from 0)
+  let dp = new Array(amount + 1).fill(Infinity)
+  dp[0] = 0
+
+  // forming the dp array
+  for (let rem = 1; rem <= amount; rem++) {
+    // for all the coins
+    for (let j = 0; j < n; j++) {
+      let remAmt = rem - coins[j]
+      if (remAmt >= 0) {
+        dp[rem] = Math.min(dp[rem], 1 + dp[remAmt])
+      }
+    }
+  }
+  // in case when all the values are Infinity, means no combination found
+  if (dp[amount] === Infinity) return -1
+  return dp[amount]
+}
+
+// time: o(amount * n), for each rem (1..amount), we try all coin types
+// - amount max is 10^4, coins max is 12 → fully acceptable
+
+// space: o(amount), storing dp array of size amount+1
