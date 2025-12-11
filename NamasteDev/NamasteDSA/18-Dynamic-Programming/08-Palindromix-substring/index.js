@@ -64,9 +64,10 @@ var countSubstrings = function (s) {
 
   // or we can do both in one loop
   for (let i = 0; i < n; i++) {
+    // all single len substrings are palindrome
     dp[i][i] = true
     res++
-    // all single len substrings are palindrome
+    // all substring of len 2 which are palindrome
     if (i < n - 1 && s[i] === s[i + 1]) {
       dp[i][i + 1] = true
       res++
