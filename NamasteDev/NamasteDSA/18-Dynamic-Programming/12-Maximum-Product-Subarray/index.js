@@ -134,7 +134,7 @@ var maxProduct0 = function (nums) {
 
 var maxProduct = function (nums) {
   let n = nums.length
-  let ltrProd = (rtlProd = 1)
+  let ltrProd = 1, rtlProd = 1
   let finalMax = -Infinity
 
   // values for left to right and right to left
@@ -161,7 +161,7 @@ var maxProduct = function (nums) {
 // doing the above process in a single loop
 var maxProduct = function (nums) {
   let n = nums.length
-  let ltrProd = (rtlProd = 1)
+  let ltrProd = 1, rtlProd = 1
   let finalMax = -Infinity
 
   for (let i = 0; i < n; i++) {
