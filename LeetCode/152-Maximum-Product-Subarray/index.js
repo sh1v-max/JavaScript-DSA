@@ -50,7 +50,7 @@
 // - update totalMax using the current maxProdSoFar
 // - after processing all elements, totalMax holds the answer
 
-var maxProduct = function (nums) {
+var maxProduct0 = function (nums) {
   let maxProdSoFar = nums[0]
   let minProdSoFar = nums[0]
   let totalMax = nums[0]
@@ -75,4 +75,103 @@ var maxProduct = function (nums) {
   }
 
   return totalMax
+}
+
+// time: O(n), each element is processed exactly once
+// space: O(1), only a fixed number of variables are used
+
+// ======================================================
+// another approach: two way traversal
+// - idea: product of subarray can be maximized by considering products from both directions
+// - we do two passes: left to right and right to left
+// - in each pass, we maintain a running product
+// - if we encounter a zero, we reset the product to 1
+// - at each step, we update the maximum product found so far
+// why this works:
+// - left-to-right pass handles cases where the optimal subarray
+//   starts early but ends before a negative suffix
+// - right-to-left pass handles cases where the optimal subarray
+//   starts after a negative prefix
+// - together, both passes cover all valid maximal product segments
+//   without explicitly tracking min/max states
+
+// intuition (two-pass product scan):
+// - the difficulty in maximum product subarray comes from:
+//     -negative numbers flipping signs
+//     -zeros breaking subarrays
+// - unlike sum, we cannot greedily discard a prefix just because it looks bad
+// - key observation:
+//   -the maximum product subarray must lie entirely
+//   -between two zeros (or array boundaries)
+// - within such a segment, the maximum product is either:
+//     -the product of the entire segment
+//     -or the product after removing a prefix up to the first negative
+//     -or the product after removing a suffix after the last negative
+// - instead of explicitly tracking negatives,
+//   we can implicitly cover all cases by scanning:
+//      -left to right
+//      -right to left
+// - this way, every possible contiguous product segment is considered
+// - zeros act as natural reset points for subarrays
+
+// approach:
+// - initialize:
+//   -ltrProd  = 1, product while scanning left to right
+//   -rtlProd  = 1, product while scanning right to left
+//   -finalMax = -Infinity
+// - iterate i from 0 to n - 1:
+//     -multiply nums[i] into ltrProd
+//     -multiply nums[n - 1 - i] into rtlProd
+// - after each multiplication:
+//   -update finalMax with the maximum of:
+//     -finalMax, ltrProd, rtlProd
+// - handle zeros:
+//   -if ltrProd becomes 0, reset it to 1
+//   -if rtlProd becomes 0, reset it to 1
+//   (because any subarray crossing a zero has product 0,
+//    and a new subarray must start after the zero)
+// - after the loop, finalMax contains the maximum product subarray
+
+var maxProduct = function (nums) {
+  let n = nums.length
+  let ltrProd = (rtlProd = 1)
+  let finalMax = -Infinity
+
+  // values for left to right and right to left
+  for (let i = 0; i < n; i++) {
+    ltrProd = ltrProd * nums[i]
+    finalMax = Math.max(finalMax, ltrProd)
+    // checking if we encounter 0, then reset the product to 1
+    if (ltrProd === 0) ltrProd = 1
+  }
+
+  for (let i = n - 1; i >= 0; i--) {
+    rtlProd = rtlProd * nums[i]
+    finalMax = Math.max(finalMax, rtlProd)
+    // checking if we encounter 0, then reset the product to 1
+    if (rtlProd === 0) rtlProd = 1
+  }
+
+  return finalMax
+}
+
+// time: O(n), a single loop processes the array once
+// space: O(1), only constant extra variables are used
+
+// doing the above process in a single loop
+var maxProduct = function (nums) {
+  let n = nums.length
+  let ltrProd = (rtlProd = 1)
+  let finalMax = -Infinity
+
+  for (let i = 0; i < n; i++) {
+    ltrProd = ltrProd * nums[i]
+    rtlProd = rtlProd * nums[n - i - 1]
+    finalMax = Math.max(finalMax, ltrProd, rtlProd)
+    // checking if we encounter 0, then reset the product to 1
+    if (ltrProd === 0) ltrProd = 1
+    if (rtlProd === 0) rtlProd = 1
+  }
+
+  return finalMax
 }
