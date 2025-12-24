@@ -32,3 +32,6 @@ var minDepth = function (root) {
   // shortest path
   return Math.min(minDepth(root.left), minDepth(root.right)) + 1
 }
+
+// time complexity: O(n)
+// space complexity: O(h) where h is height of the tree
