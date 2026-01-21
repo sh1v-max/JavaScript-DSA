@@ -20,10 +20,10 @@ var flipAndInvertImage = function (image) {
     let left = 0
     let right = row.length - 1
 
-    while (left <= length) {
+    while (left <= right) {
       // swapping and inverting on the go
       let temp = row[left] ^ 1
-      row[left] = row[right]
+      row[left] = row[right] ^ 1
       row[right] = temp
 
       left++
