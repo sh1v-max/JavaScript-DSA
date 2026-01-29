@@ -1,7 +1,6 @@
 // 1652. Defuse the Bomb
 // https://leetcode.com/problems/defuse-the-bomb/
 
-
 // each element in the array must be replaced
 //  array is circular, check corner cases
 // we will replace based on these conditions
@@ -26,41 +25,41 @@
 // return the result array
 
 var decrypt = function (code, k) {
-    let n = code.length
-    let res = new Array(n).fill(0)
+  let n = code.length
+  let res = new Array(n).fill(0)
 
-    if (k === 0) {
-        return res
-    }
+  if (k === 0) {
+    return res
+  }
 
-    let sum = 0
-    let start, end
+  let sum = 0
+  let start, end
 
-    if (k > 0) {
-        // sum of next k elements
-        start = 1
-        end = k
-    } else {
-        // sum of prev k elements
-        start = n + k
-        end = n - 1
-        k = -k
-    }
+  if (k > 0) {
+    // sum of next k elements
+    start = 1
+    end = k
+  } else {
+    // sum of prev k elements
+    start = n + k
+    end = n - 1
+    k = -k
+  }
 
-    // checking window sum
-    for (let i = start; i <= end; i++) {
-        sum += code[i % n]
-    }
+  // checking window sum
+  for (let i = start; i <= end; i++) {
+    sum += code[i % n]
+  }
 
-    // sliding window
-    for (let i = 0; i < n; i++) {
-        res[i] = sum;
-        sum -= code[(start + i) % n];
-        sum += code[(end + i + 1) % n];
-    }
+  // sliding window
+  for (let i = 0; i < n; i++) {
+    res[i] = sum
+    sum -= code[(start + i) % n]
+    sum += code[(end + i + 1) % n]
+  }
 
-    return res;
-};
+  return res
+}
 
 // time complexity: O(n)
 // - each element is added and removed from the sliding window once
