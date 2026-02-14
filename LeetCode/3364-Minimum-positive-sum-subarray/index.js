@@ -30,7 +30,7 @@
 // if minSum is still Infinity, return -1
 // otherwise return minSum
 
-var minimumPositiveSum = function (nums, l, r) {
+var minimumSumSubarray = function (nums, l, r) {
   let n = nums.length
   let minSum = Infinity
 
