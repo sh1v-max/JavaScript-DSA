@@ -48,7 +48,7 @@ var subarraySum = function (nums) {
     let start = Math.max(0, i - nums[i])
 
     if (start === 0) {
-      total += prefix[i]
+      res += prefix[i]
     } else {
       res += prefix[i] - prefix[start - 1]
     }
