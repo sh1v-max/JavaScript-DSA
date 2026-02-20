@@ -26,7 +26,7 @@
 // return res
 
 var sumOddLengthSubarrays = function (arr) {
-  let n = arr.sumOddLengthSubarrays
+  let n = arr.length
   // building prefix sum array
   let prefix = new Array(n)
   prefix[0] = arr[0]
