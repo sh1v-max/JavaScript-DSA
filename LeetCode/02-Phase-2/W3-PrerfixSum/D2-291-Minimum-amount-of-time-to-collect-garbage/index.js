@@ -29,7 +29,7 @@ var garbageCollection = function (garbage, travel) {
   let n = garbage.length
 
   // prefix travel time, calculating sum of travel time
-  let prefixTravel = new Array(n).fill(0) 
+  let prefixTravel = new Array(n).fill(0)
   for (let i = 1; i < n; i++) {
     prefixTravel[i] = prefixTravel[i - 1] + travel[i - 1]
   }
@@ -47,7 +47,7 @@ var garbageCollection = function (garbage, travel) {
       lastM = i
     }
 
-    if (garbage[i].includes('P')) { 
+    if (garbage[i].includes('P')) {
       lastP = i
     }
 
@@ -73,3 +73,4 @@ var garbageCollection = function (garbage, travel) {
 
 // time complexity: O(n)
 // space complexity: O(n)
+
