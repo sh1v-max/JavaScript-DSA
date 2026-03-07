@@ -15,11 +15,11 @@
 // approach:
 // create a frequency map
 // first pass:
-//   iterate through the string and count occurrences of each character
+// - iterate through the string and count occurrences of each character
 // second pass:
-//   iterate through the string again
-//   check if frequency of current character == 1
-//   if yes, return its index
+// - iterate through the string again
+// - check if frequency of current character == 1
+// - if yes, return its index
 // if no unique character is found, return -1
 
 var firstUniqChar = function(s) {
